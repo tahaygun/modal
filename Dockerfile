@@ -11,8 +11,8 @@ RUN apt-get update && apt-get install -y \
 # Copy requirements first to leverage Docker cache
 COPY requirements.txt .
 
-# Install torch first
-RUN pip install --no-cache-dir torch>=2.0.0
+# Install PyTorch with CUDA support first
+RUN pip install --no-cache-dir torch --extra-index-url https://download.pytorch.org/whl/cu121
 
 # Install remaining requirements
 RUN pip install --no-cache-dir -r requirements.txt
@@ -24,4 +24,4 @@ COPY . .
 EXPOSE 7860
 
 # Run the application
-CMD ["python", "app.py"] 
+CMD ["python", "app.py"]
