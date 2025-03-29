@@ -125,7 +125,9 @@ iface = gr.Interface(
         ["example1.mp3", "Whisper Large v3 (Flash Attention)"],
         ["example2.wav", "Distil Large v2 (Flash Attention)"]
     ],
-    live=True  # Enable real-time updates
+    live=True,  # Enable real-time updates
+    allow_flagging=False,  # Disable flagging for Hugging Face Spaces
+    analytics_enabled=False  # Disable analytics for Hugging Face Spaces
 )
 
 if __name__ == "__main__":

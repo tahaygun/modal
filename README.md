@@ -1,48 +1,42 @@
-# Insanely Fast Whisper Gradio App
+# Insanely Fast Whisper Transcription
 
-This is a Gradio application that uses the insanely-fast-whisper model for high-speed speech recognition. The application provides a simple interface to upload audio files and get their transcriptions.
+This Space provides a fast and efficient way to transcribe audio files using various Whisper models and optimization techniques. The application features real-time transcription with progress tracking and multiple model configurations.
 
 ## Features
 
-- Fast transcription using Whisper Large v3
-- Support for various audio formats (MP3, WAV, etc.)
-- Simple and intuitive Gradio interface
-- Ready to deploy on Hugging Face Spaces
+- Multiple Whisper model configurations:
+  - Whisper Large v3 (Standard, Optimized, Flash Attention)
+  - Distil Large v2 (Optimized, Flash Attention)
+  - Whisper Large v2 (Faster-8bit)
+- Real-time transcription streaming
+- Progress tracking for model loading and transcription
+- Support for various audio formats (MP3, WAV, M4A, FLAC)
+- Optimized performance with Flash Attention 2 and BetterTransformer
 
-## Local Installation
+## Performance Metrics
 
-1. Clone this repository
-2. Install the requirements:
+Based on 150 minutes of audio:
 
-```bash
-pip install -r requirements.txt
-```
-
-3. Run the application:
-
-```bash
-python app.py
-```
-
-## Deploying to Hugging Face Spaces
-
-1. Create a new Space on Hugging Face
-2. Choose "Gradio" as the SDK
-3. Push this repository to your Space
-4. The Space will automatically build and deploy the application
+- Whisper Large v3 (Standard): ~31 minutes
+- Whisper Large v3 (Optimized): ~5 minutes
+- Whisper Large v3 (Flash Attention): ~1.6 minutes
+- Distil Large v2 (Optimized): ~3.3 minutes
+- Distil Large v2 (Flash Attention): ~1.3 minutes
+- Whisper Large v2 (Faster-8bit): ~8.2 minutes
 
 ## Usage
 
-1. Open the application in your browser
-2. Upload an audio file using the file uploader
-3. Wait for the transcription to complete
-4. The transcribed text will appear in the output box
+1. Upload an audio file using the file uploader
+2. Select your preferred model configuration from the dropdown
+3. Watch the real-time transcription progress
+4. The transcribed text will appear gradually as it's processed
 
-## Requirements
+## Technical Details
 
-- Python 3.8+
-- CUDA-capable GPU (recommended for faster processing)
-- See requirements.txt for all dependencies
+- Built with Gradio
+- Uses Hugging Face Transformers
+- Optimized with Flash Attention 2 and BetterTransformer
+- Supports both CPU and GPU inference
 
 ## License
 
