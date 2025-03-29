@@ -1,4 +1,14 @@
-<<<<<<< HEAD
+---
+title: Insanely Fast Whisper Transcription
+emoji: 🎙️
+colorFrom: blue
+colorTo: indigo
+sdk: gradio
+sdk_version: '4.0.0'
+app_file: app.py
+pinned: false
+---
+
 # Insanely Fast Whisper Transcription
 
 This Space provides a fast and efficient way to transcribe audio files using various Whisper models and optimization techniques. The application features real-time transcription with progress tracking and multiple model configurations.
@@ -42,17 +52,3 @@ Based on 150 minutes of audio:
 ## License
 
 MIT License
-=======
----
-title: Whisper
-emoji: 💻
-colorFrom: gray
-colorTo: red
-sdk: gradio
-sdk_version: 5.23.1
-app_file: app.py
-pinned: false
----
-
-Check out the configuration reference at https://huggingface.co/docs/hub/spaces-config-reference
->>>>>>> 6e24e185b19a6e154e2955ef2d8a73855266d343
