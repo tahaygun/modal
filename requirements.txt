@@ -1,6 +1,6 @@
+torch>=2.0.0
 gradio>=4.19.2
 transformers>=4.36.0
-torch>=2.0.0
 accelerate>=0.25.0
 optimum>=1.16.0
 insanely-fast-whisper>=0.0.15
